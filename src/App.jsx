@@ -17,6 +17,7 @@ function Header() {
         </a>
         <nav className="hidden sm:flex items-center gap-6 text-sm text-gray-700">
           <a href="#about" className="hover:text-gray-900 transition-colors">About</a>
+          <a href="#ai" className="hover:text-gray-900 transition-colors">AI</a>
           <a href="#features" className="hover:text-gray-900 transition-colors">Features</a>
           <a href="#contact" className="hover:text-gray-900 transition-colors">Contact</a>
           <a href="#contact" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-md shadow transition-colors">
@@ -40,18 +41,18 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
             <Bot className="h-3.5 w-3.5" /> n8n Automation Services
           </span>
-          <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
+          <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
             Connect your apps. Automate repetitive tasks. Work smarter with n8n.
           </h1>
-          <p className="mt-5 text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
             n8n is a powerful workflow automation tool that links your favorite apps and services, so you can save time and eliminate manual busywork.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-md shadow transition-colors">
               <Mail className="h-5 w-5" />
               Get in Touch
@@ -68,13 +69,68 @@ function Hero() {
 
 function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
+    <section id="about" className="py-14 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">About</h2>
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+          <p className="mt-5 text-lg text-gray-700 leading-relaxed">
             n8n Automation Services helps businesses and individuals streamline their processes by connecting different apps and automating routine workflows — without the need for coding. Whether it’s integrating CRMs, managing data between Google Sheets and APIs, automating emails, or building custom triggers and actions, we make your operations faster and more efficient. Our goal is to save you time, reduce manual errors, and help your systems work together seamlessly.
           </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function AIAutomation() {
+  return (
+    <section id="ai" className="py-14 md:py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+              <Bot className="h-3.5 w-3.5" /> AI Automation
+            </div>
+            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-gray-900">
+              How AI automation is reshaping work
+            </h2>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              AI is moving teams from reactive to proactive. With LLMs and smart classifiers embedded into workflows, organizations can interpret messages, summarize context, enrich records, and trigger decisions instantly. Combined with n8n, AI turns unstructured inputs into clear actions across your stack.
+            </p>
+            <ul className="mt-5 space-y-3 text-gray-800">
+              <li className="flex items-start gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-orange-500" /> Auto-triage: classify support tickets by intent, priority, and sentiment, then route to the right channel.</li>
+              <li className="flex items-start gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-orange-500" /> Smart enrichment: extract entities from emails and docs to fill CRM fields and create follow-up tasks.</li>
+              <li className="flex items-start gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-orange-500" /> Knowledge assist: summarize long threads and generate next-step recommendations for your team.</li>
+              <li className="flex items-start gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-orange-500" /> Guardrails: validate data, check policies, and flag anomalies before records reach downstream tools.</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-gray-200 bg-white p-5 md:p-6">
+            <h3 className="text-lg font-semibold text-gray-900">Popular AI + n8n use cases</h3>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="rounded-lg border border-gray-200 p-4">
+                <p className="text-sm font-semibold text-gray-900">Lead qualification</p>
+                <p className="mt-1 text-sm text-gray-700">Score and tag inbound leads using AI summaries and route to CRM.</p>
+              </div>
+              <div className="rounded-lg border border-gray-200 p-4">
+                <p className="text-sm font-semibold text-gray-900">Support automation</p>
+                <p className="mt-1 text-sm text-gray-700">Detect intent and sentiment, auto-reply basics, escalate complex cases.</p>
+              </div>
+              <div className="rounded-lg border border-gray-200 p-4">
+                <p className="text-sm font-semibold text-gray-900">Content ops</p>
+                <p className="mt-1 text-sm text-gray-700">Generate drafts, repurpose posts, and schedule multi-channel publishing.</p>
+              </div>
+              <div className="rounded-lg border border-gray-200 p-4">
+                <p className="text-sm font-semibold text-gray-900">Back-office RPA</p>
+                <p className="mt-1 text-sm text-gray-700">Parse invoices, reconcile entries, and update spreadsheets/databases.</p>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-1 text-xs font-semibold">LLM</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-1 text-xs font-semibold">OCR</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-1 text-xs font-semibold">Classifiers</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-1 text-xs font-semibold">Embeddings</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -111,14 +167,14 @@ const features = [
 
 function Features() {
   return (
-    <section id="features" className="py-16 md:py-24 bg-gray-50">
+    <section id="features" className="py-14 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">What we do</h2>
-          <p className="mt-4 text-gray-700">Practical automation services to streamline your operations using n8n.</p>
+          <p className="mt-3 text-gray-700">Practical automation services to streamline your operations using n8n.</p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f) => (
             <div key={f.title} className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg">
               <div className="flex items-center gap-3">
@@ -127,7 +183,7 @@ function Features() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{f.title}</h3>
               </div>
-              <p className="mt-4 text-gray-700 leading-relaxed">{f.desc}</p>
+              <p className="mt-3 text-gray-700 leading-relaxed">{f.desc}</p>
               <div className="pointer-events-none absolute -right-6 -bottom-6 h-24 w-24 rounded-full bg-gradient-to-br from-orange-100 to-transparent" />
             </div>
           ))}
@@ -139,12 +195,12 @@ function Features() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white">
+    <section id="contact" className="py-14 md:py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Get in Touch</h2>
-          <p className="mt-4 text-gray-700">Have a project in mind or need help with automation? Reach out and we’ll respond shortly.</p>
-          <a href="mailto:mandharemeghraj@gmail.com" className="mt-6 inline-flex items-center gap-2 text-white bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-md font-semibold shadow">
+          <p className="mt-3 text-gray-700">Have a project in mind or need help with automation? Reach out and we’ll respond shortly.</p>
+          <a href="mailto:mandharemeghraj@gmail.com" className="mt-5 inline-flex items-center gap-2 text-white bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-md font-semibold shadow">
             <Mail className="h-5 w-5" /> mandharemeghraj@gmail.com
           </a>
         </div>
@@ -155,8 +211,8 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="border-t border-gray-200 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <div className="h-7 w-7 rounded-md bg-orange-500 flex items-center justify-center">
             <span className="text-white font-black text-xs">W</span>
@@ -176,6 +232,7 @@ export default function App() {
       <main className="flex-1">
         <Hero />
         <About />
+        <AIAutomation />
         <Features />
         <Contact />
       </main>
